@@ -1,0 +1,12 @@
+@import "bourbon";
+// @include font-face("GothamPro", "../fonts/GothamPro/GothamProExtraBold/GothamProExtraBold", 800, $file-formats: eot woff ttf)
+@include font-face("GothamProBlack", "../fonts/GothamPro/GothamProBlack/GothamProBlack", 400, normal, $file-formats: eot woff ttf)
+@include font-face("GothamPro", "../fonts/GothamPro/GothamProLight/GothamProLight",  300, $file-formats: eot woff ttf)
+@include font-face("GothamPro", "../fonts/GothamPro/GothamProRegular/GothamProRegular", 400, normal, $file-formats: eot woff ttf)
+@include font-face("GothamPro", "../fonts/GothamPro/GothamProMedium/GothamProMedium", 500, normal, $file-formats: eot woff ttf)
+@include font-face("GothamPro", "../fonts/GothamPro/GothamProBold/GothamProBold", 700, normal, $file-formats: eot woff ttf)
+@include font-face("GothamPro", "../fonts/GothamPro/GothamProItalic/GothamProItalic", 400, italic, $file-formats: eot woff ttf)
+// @include font-face("GothamPro", "../fonts/GothamPro/GothamProLightItalic/GothamProLightItalic", 300, italic, $file-formats: eot woff ttf)
+// @include font-face("Impact", "../fonts/ImpactRegular/ImpactRegular", $file-formats: eot woff ttf)
+// @include font-face("Exo2", "../fonts/Exo2/Exo2Light/Exo2Light", $file-formats: eot woff ttf)
+// @include font-face("Exo2", "../fonts/Exo2/Exo2Bold/Exo2Bold", bold, $file-formats: eot woff ttf)

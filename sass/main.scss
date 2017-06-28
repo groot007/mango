@@ -1,0 +1,1996 @@
+@import "bourbon";
+@import "libs";
+@import "_mixins";
+@import "typograph";
+header {
+    background: #333 url(../img/header-bg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 875px;
+    text-align: center;
+    color: #fff;
+    @include small {
+        height: auto;
+    }
+    .top-head {
+        padding: 10px 0;
+        .logo-block {
+            float: left;
+            @include small {
+                text-align: center;
+            }
+            @include extraSmall {
+                width: 100%;
+            }
+            .logo {
+                float: left;
+                @include small {
+                    line-height: 1;
+                    float: none;
+                }
+            }
+            .slogan {
+                font-size: 14px;
+                // font-weight: 400;
+                font-style: italic;
+                line-height: 21px;
+                width: 450px;
+                text-align: left;
+                padding-top: 15px;
+                padding-left: 160px;
+                @include small {
+                    text-align: center;
+                    width: 400px;
+                    padding: 0px;
+                }
+                @include extraSmall {
+                    margin: 0 auto;
+                }
+                @include custom {
+                    width: auto;
+                    margin-bottom: 5px;
+                    line-height: 16px;
+                }
+            }
+        }
+        .contacts-block {
+            float: right;
+            @include extraSmall {
+                width: 100%;
+            }
+            .phone,
+            .email {
+                display: inline-block;
+                padding-top: 10px;
+                @include small {
+                    padding-top: 5px;
+                    display: block;
+                }
+                a {
+                    color: #fff;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-weight: 400;
+                    &:hover {
+                        color: $light-blue;
+                    }
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .email {
+                font-size: 18px;
+                margin-left: 15px;
+                @include custom {
+                    font-size: 16px;
+                }
+            }
+            .phone {
+                font-size: 24px;
+                @include custom {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .angle-border {
+        margin: 120px 0 85px 0;
+        max-width: 100%;
+        @include small {
+            margin: 80px 0;
+        }
+        @include extraSmall {
+            margin: 60px 0 40px 0;
+        }
+        h1 {
+            color: #fff;
+        }
+        h2 {
+            color: $yellow;
+        }
+    }
+    h3 {
+        width: 85%;
+        margin: 0 auto;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 34px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        @include small {
+            width: 80%;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        @include extraSmall {
+            width: 72%;
+            line-height: 24px;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        @include custom {
+            width: 100%;
+            line-height: 22px;
+        }
+    }
+    .deskr {
+        width: 85%;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+        margin: 0 auto;
+        margin-bottom: 55px;
+        @include small {
+            width: 80%;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @include extraSmall {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 40px;
+        }
+        @include custom {
+            width: 100%;
+        }
+    }
+    .btn {
+        background-color: $yellow;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+}
+.try-block {
+    padding: 90px 0 90px 0;
+    @include small {
+        padding: 40px 0;
+    }
+    ul {
+        margin-top: 35px;
+        @include custom {
+            margin-top: 40px;
+        }
+        li {
+            float: left;
+            width: 25%;
+            @include extraSmall {
+                width: 50%;
+            }
+            @include custom {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            a {
+                display: inline-block;
+                &:hover {
+                    .games-icon {
+                        .with-bg {
+                            opacity: 1;
+                        }
+                        .main {
+                            opacity: 0;
+                            display: none;
+                        }
+                    }
+                }
+                h4 {
+                    text-transform: uppercase;
+                    color: $blue-text;
+                    font-size: 24px;
+                    margin-top: 30px;
+                    margin-bottom: 10px;
+                    @include small {
+                        font-size: 20px;
+                    }
+                    @include custom {
+                        margin-bottom: 5px;
+                        font-size: 24px;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    padding: 0 20px;
+                    min-height: 40px;
+                    color: #8e93a2;
+                    @include small {
+                        padding: 0 10px;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    @include custom {
+                        font-size: 18px;
+                        padding: 0;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .games-icon {
+        min-height: 193px;
+        position: relative;
+        @include small {
+            min-height: 120px;
+        }
+        @include extraSmall {
+            min-height: 180px;
+        }
+        .with-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            @include extraSmall {
+                left: 50%;
+                margin-left: -132px;
+            }
+        }
+        .main {
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include extraSmall {
+                left: 50%;
+                margin-left: -132px;
+                ;
+            }
+        }
+    }
+}
+.why-not {
+    padding: 80px 0 70px 0;
+    background: #333 url(../img/why-bg.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    @include small {
+        padding: 60px 0;
+    }
+    @include extraSmall {
+        padding: 30px 0;
+    }
+    @include custom {
+        padding: 30px 0;
+    }
+    h1 {
+        color: #fff;
+    }
+    h2 {
+        color: $yellow;
+        @include custom {
+            font-size: 32px;
+        }
+    }
+    .text-wrap {
+        margin-top: 30px;
+        text-align: left;
+        margin-left: 9%;
+        @include small {
+            margin-top: 50px;
+        }
+        @include extraSmall {
+            margin-left: 0;
+            margin-top: 10px;
+            padding: 0 30px;
+        }
+        @include custom {
+            padding: 0;
+            margin-top: 0;
+        }
+        p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            @include small {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            @include extraSmall {
+                font-size: 16px;
+            }
+        }
+        .first {
+            margin-bottom: 65px;
+            @include small {
+                margin-bottom: 35px;
+            }
+            @include extraSmall {
+                margin-bottom: 10px;
+            }
+            @include custom {
+                margin-bottom: 15px;
+            }
+        }
+        .second {} .yellow-bg {
+            font-weight: 600;
+            color: $blue-text;
+            padding: 2px 0;
+            background: $yellow;
+        }
+        .bold {
+            margin-top: 25px;
+            margin-bottom: 75px;
+            font-weight: 600;
+            @include small {
+                margin-top: 20px;
+                margin-bottom: 40px;
+            }
+            @include extraSmall {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+            @include custom {
+                margin-bottom: 30px;
+            }
+            &.last {
+                font-size: 36px;
+                margin-top: 0;
+                margin-bottom: 0;
+                @include extraSmall {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+                @include custom {
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}
+.select-form {
+    padding: 55px 0 30px 0;
+    .left-col, .right-col {
+        float: left;
+        width: 50%;
+        @include custom {
+            width: 100%;
+        }
+    }
+    .wrap-form {
+        background: $yellow;
+        padding: 50px 35px 100px 35px;
+        @include small {
+            padding: 30px;
+            padding-bottom: 100px;
+        }
+        @include custom {
+            padding: 30px 5px;
+        }
+        p {
+            color: $blue-text;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            margin: 40px 0 40px 0;
+            text-align: center;
+            @include extraSmall {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        form {
+            width: 100%;
+            margin: 0 auto;
+            .group {
+                width: 65%;
+                margin: 15px auto;
+                @include medium {
+                    width: 80%;
+                }
+                @include small {
+                    width: 100%;
+                }
+                @include custom {
+                    width: 90%;
+                }
+            }
+        }
+        .btn {
+            width: 65%;
+            margin: 0 auto;
+            padding: 20px 60px;
+            @include medium {
+                width: 80%;
+            }
+            @include small {
+                width: 100%;
+            }
+            @include extraSmall {
+                padding: 15px;
+            }
+            @include custom {
+                width: 90%;
+            }
+        }
+    }
+}
+.header-for-games {
+    padding: 70px 0 0 0;
+    // h1{
+    // 	color: $grey-color;
+    // }
+    // h2{
+    // 	color: $blue-text;
+    // 	margin-bottom: 20px;
+    // 	@include small{
+    // 		margin-bottom: 10px;
+    // 	}
+    // }
+    // h3{
+    // 	color: $grey-color;
+    // 	text-transform: uppercase;
+    // 	font-size: 24px;
+    // 	font-weight: 400;
+    // 	line-height: 30px;;
+    // 	text-align: center;
+    // 	// padding: 0 20%;
+    // 	@include small{
+    // 		font-size: 18px;
+    // 		line-height: 24px;
+    // 	}
+    // 	@include extraSmall{
+    // 		line-height: 20px;
+    // 		font-size: 14px;
+    // 	}
+    // }
+}
+.game {
+    padding-top: 80px;
+    @include small {
+        padding-top: 70px;
+    }
+    @include custom {
+        padding-top: 20px;
+        margin-bottom: 36px;
+    }
+    .short-deskr {
+        margin: 45px 0 0px 0;
+        @include extraSmall {
+            margin: 25px 0 0 0;
+        }
+        &:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .left-part,
+        .right-part {
+            width: 50%;
+            float: left;
+            @include extraSmall {
+                width: 100%;
+                float: none;
+            }
+        }
+        .left-part {
+            padding-right: 100px;
+            text-align: left;
+            font-size: 18px;
+            line-height: 24px;
+            @include medium {
+                padding-right: 20px;
+            }
+            @include small {
+                padding-right: 20px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+            @include extraSmall {
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        .right-part {
+            text-align: left;
+            padding-left: 60px;
+            @include extraSmall {
+                text-align: center;
+                padding: 0;
+            }
+            p {
+                font-size: 24px;
+                color: $grey-color;
+                font-weight: 600;
+                margin-bottom: 35px;
+                @include small {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                span {
+                    color: $blue-text;
+                }
+            }
+        }
+    }
+    // &.winter-is-coming .game-deskr {
+    //     background: transparent url(../img/winter-is-coming.jpg) no-repeat center center;
+    //     background-size: cover;
+    // }
+    //  &.centavra .game-deskr {
+    //     background: transparent url(../img/centavra.jpg) no-repeat center center;
+    //     background-size: cover;
+    // }
+    .game-deskr {
+        // background: transparent url(../img/popular-game-bg.jpg) no-repeat center center;
+        background-size: cover;
+        height: auto;
+        padding: 115px 0 70px 0;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+        text-align: left;
+
+        #wrapper {
+            height: 100%;
+            position: absolute;
+            min-height: 750px;
+            overflow: hidden;
+            top: 0;
+            width: 100%;
+            z-index: -1;
+            .layer1, .layer2, .layer3{
+
+                width: 100%;
+                height: 110%;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            .layer1{
+                background-image: url(../img/paralax/person-1.png);
+                z-index: 99;
+                background-size: 70%;;
+                // margin-bottom: -50px;
+                background-position: bottom;
+                &.winter{
+                    background-size: 100%;;
+                    background-image: url(../img/paralax/people.png);
+
+                }
+                &.centavra{
+                     // background-position-y: center center;
+                    background-size: cover;
+
+                    background-image: url(../img/paralax/people-star.png);
+                }
+            }
+            .layer2{
+                background-image: url(../img/paralax/monets.png);
+                z-index: 99;
+                background-size: 95%;
+                &.winter{
+
+                    background-image: url(../img/paralax/snow.png);
+                }
+                &.centavra{
+
+                    background-size:100%;
+                    background-image: url(../img/paralax/stars.png);
+                }
+            }
+            .layer3{
+                background-size: cover;
+                background-image: url(../img/paralax/popular-game-bg.jpg);
+                &.winter{
+                    background-image: url(../img/paralax/bg-2.png);
+                }
+                &.centavra{
+                    background-image: url(../img/paralax/bg-3.png);
+                }
+            }
+        }
+        @include small {
+            padding: 80px 0;
+            height: auto;
+        }
+        @include custom {
+            padding: 80px 0 60px 0;
+        }
+        .wrap {
+            width: 80%;
+            margin-left: 18%;
+            @include medium {
+                width: 95%;
+                margin-left: 5%;
+            }
+            @include small {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        .with-ybg {
+            font-size: 24px;
+            margin-bottom: 35px;
+            @include small {
+                margin-bottom: 25px;
+            }
+            @include extraSmall {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            @include custom {
+                font-size: 18px;
+            }
+        }
+        h4 {
+            width: 60%;
+            line-height: 30px;
+            font-size: 24px;
+            margin-bottom: 40px;
+            @include small {
+                width: auto;
+                margin-bottom: 20px;
+            }
+            @include extraSmall {
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @include custom {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            padding-right: 75px;
+            @include small {
+                padding-right: 0;
+                line-height: 24px;
+                font-size: 16px;
+            }
+            @include extraSmall {
+                font-size: 15px;
+                line-height: 22px;
+            }
+            @include custom {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        .bottom-part {
+            margin-top: 65px;
+            @include extraSmall {
+                margin-top: 30px;
+            }
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            .left-part {
+                width: 60%;
+                float: left;
+                @include extraSmall {
+                    width: 50%;
+                }
+                @include custom {
+                    text-align: center;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .popup {
+                    display: inline-block;
+                    border-bottom: 1px dashed $light-blue;
+                    line-height: 20px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    &:hover{
+                        border-color: #fff;
+                        color: #fff;
+                    }
+                     &:focus{
+                         border-color: #fff;
+                        color: #fff;
+                     }
+
+                    @include extraSmall {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .right-part {
+                width: 40%;
+                float: left;
+                @include extraSmall {
+                    width: 50%;
+                }
+                @include custom {
+                    text-align: center;
+                    width: 100%;
+                }
+                .participants {
+                    display: inline-block;
+                    padding: 15px 30px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background: rgba(0, 0, 0, .7);
+                    @include extraSmall {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .btns {
+            margin-top: 35px;
+            @include custom {
+                text-align: center;
+            }
+            .video-btn {
+                display: inline-block;
+                padding: 20px 30px 20px 80px;
+                border: 1px solid $yellow;
+                border-radius: 50px;
+                color: $yellow;
+                margin-right: 20px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-family: $black-font;
+                position: relative;
+                &:hover {
+                    color: $light-blue;
+                }
+                .fa {
+                    position: absolute;
+                    left: -2px;
+                    top: -1px;
+                    border: 1px solid $yellow;
+                    border-radius: 50%;
+                    padding: 14px 18px;
+                    font-size: 36px;
+                }
+                @include custom {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+            .btn {
+                padding: 20px 30px;
+                vertical-align: middle;
+                background: $yellow;
+                display: inline-block;
+                @include custom {
+                    padding: 20px 40px;
+                }
+            }
+        }
+    }
+}
+.games-list {
+    padding: 80px 0;
+    @include extraSmall {
+        padding: 50px 0;
+    }
+    @include custom {
+        padding: 20px 0 50px 0;
+    }
+    h2 {
+        margin: 0;
+    }
+    .privilege-list {
+        margin: 20px 0;
+        display: inline-block;
+        @include extraSmall {
+            margin-top: 35px;
+            li {
+                display: inline-block;
+                float: none;
+                p {
+                    font-size: 18px;
+                }
+            }
+            text-align: center;
+        }
+        @include custom {
+            margin-top: 0;
+        }
+        li {
+            float: left;
+            p {
+                font-family: $black-font;
+                font-size: 24px;
+                font-weight: 600;
+                color: $blue-text;
+            }
+        }
+    }
+    .table-container {
+        width: 85%;
+        margin: 0 auto;
+        overflow: auto;
+        min-width: 320px;
+        @include custom {
+            width: 100%;
+        }
+    }
+
+    $callspacing : .3%;
+    $columnWidth : 99.4% / 3;
+
+    .table {
+        width: 100%;
+        font-weight: 600;
+        margin: 0 auto;
+        color: $blue-text;
+        min-width: 500px;
+         overflow: auto;
+        font-size: 18px;
+        @include extraSmall {
+            font-size: 14px;
+            line-height: 20px;
+            width: 100%;
+        }
+        .head{
+            font-size: 0;
+            .th {
+                background: $blue-text;
+                color: #fff;
+                padding: 5px;
+                margin-right: $callspacing;
+                width: $columnWidth;
+                display: inline-block;
+                font-size: 18px;
+                min-width: 160px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                @include small{
+                    font-size: 16px;
+                }
+                @include extraSmall {
+                    font-size: 14px;
+                    min-width: 120px;
+                }
+                // @include custom{
+                //     min-width: 170px;
+                // }
+            }
+        }
+        .body{
+            .row {
+                text-align: left;
+                font-size: 0;
+                margin: $callspacing 0;
+                &>div{
+                    &:first-child {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                    margin-right: $callspacing;
+                    width: $columnWidth;
+                    display: inline-block;
+                    background: #d0d4de;
+                    font-weight: 400;
+                    text-align: center;
+                    vertical-align: top;
+                    text-transform: none;
+                    padding: 5px;
+                    font-size: 18px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    @include small{
+                        font-size: 16px;
+                    }
+                    @include extraSmall {
+                        font-size: 14px;
+                        padding: 5px;
+                    }
+                    // @include custom{
+                    //     min-width: 170px;
+                    // }
+                    a {
+                        color: $blue-text;
+                        border-bottom: 1px dashed $blue-text;
+                        &:hover {
+                            color: $light-blue;
+                            border-bottom: 1px dashed $light-blue;
+                        }
+                    }
+                }
+            }
+            .details {
+                    width: 100%;
+                    text-align: left;
+                    background: transparent;
+                    font-weight: 400;
+                    display: none;
+                    text-transform: none;
+                    padding: 5px 20px;
+                    font-weight: 400;
+                    text-align: left;
+                    @include extraSmall {
+                        padding: 5px;
+                    }
+                    p {
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                    ul {
+                        margin-left: 40px;
+                        display: inline-block;
+                    }
+                }
+        }
+    }
+}
+.get-catalog {
+    padding: 100px 0;
+    background: transparent url(../img/get-catalog-bg.jpg) no-repeat center center;
+    background-size: cover;
+    @include small {
+        padding: 50px 0;
+    }
+    @include custom {} .left-part {
+        width: 50%;
+        padding-top: 85px;
+        margin-right: 5%;
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            @include extraSmall {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+        @include small {
+            width: 40%;
+            margin-right: 5%;
+            padding: 80px 20px;
+        }
+        @include extraSmall {
+            display: none;
+            padding: 0;
+            width: 100%;
+        }
+    }
+    .right-part {
+        width: 45%;
+        @include small {
+            width: 55%;
+        }
+        @include extraSmall {
+            width: 100%;
+        }
+        .wrap-form {
+            @include small {
+                padding: 30px 10px;
+            }
+            @include extraSmall {
+                width: 70%;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            @include custom {
+                width: 100%;
+            }
+            p {
+                @include small {
+                    margin: 10px 0 30px 0;
+                }
+            }
+        }
+        .wrap-form form .group {
+            width: 80%;
+            @include custom {
+                width: 100%;
+            }
+        }
+        .wrap-form .btn {
+            line-height: 18px;
+            width: 80%;
+        }
+    }
+}
+.clients {
+    padding: 80px 0 50px 0;
+    ;
+    @include small {
+        padding: 60px 0;
+    }
+    @include custom {
+        padding: 20px 0;
+    }
+    ul {
+        margin-top: 30px;
+        @include small {
+            margin-top: 30px;
+        }
+        @include custom {
+            margin: 0px;
+        }
+        li {
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+    }
+}
+.photos {
+    padding: 0px 0 0px 0;
+    @include small {
+        padding: 0px 0 40px 0;
+        ;
+    }
+    .gallery {
+        margin-top: 70px;
+        font-size: 0;
+        @include extraSmall {
+            margin-top: 30px;
+        }
+    }
+    img {
+        padding: 3px;
+        width: 20vw;
+        @include small {
+            width: 33vw;
+        }
+        @include custom {
+            width: 50vw;
+        }
+    }
+}
+.video-reviews {
+    padding: 70px 0 60px 0;
+    blockquote {
+        margin: 25px 0 30px 0;
+        display: inline-block;
+        text-align: left;
+        @include small {
+            margin: 20px 0 30px;
+        }
+        .fa {
+            font-size: 76px;
+            color: #e2e4e7;
+        }
+        .text {
+            display: inline-block;
+            padding-left: 16px;
+        }
+        p {
+            strong {
+                font-size: 22px;
+                color: $blue-text;
+            }
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #8e93a2;
+        }
+    }
+    .slider {
+        .video {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #000;
+            @include small{
+                    max-width: 90%;
+                }
+            @include extraSmall {
+                padding: 0;
+                border: none;
+            }
+            iframe {
+                // max-width: 100%;
+                // height: auto;
+                // min-height: 400px;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 100%;
+                @include extraSmall {
+                    max-width: 90%;
+                    max-height: 320px;
+                }
+                 @include custom
+                 {
+                     max-height: 240px;
+                 }
+            }
+        }
+        .fa {
+            width: 80px;
+            height: 80px;
+            font-size: 80px;
+            line-height: 80px;
+            @include small {
+                width: 50px;
+                height: 50px;
+                font-size: 50px;
+                line-height: 50px;
+            }
+            &.fa-angle-right {
+                @include extraSmall {
+                    right: 0;
+                }
+                @include small {
+                    right: -30px;
+                }
+            }
+            &.fa-angle-left {
+                @include extraSmall {
+                    left: 0;
+                }
+                @include small {
+                    left: -30px;
+                }
+            }
+        }
+    }
+}
+.reviews {
+    padding: 150px 0 60px 0;
+    background: transparent url(../img/reviews-bg.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    @include medium {
+        padding: 100px 0 50px 0;
+    }
+    img {
+        display: inline-block;
+    }
+    @include small {
+        padding: 50px 0;
+    }
+    @include extraSmall {
+        padding: 50px 0 80px 0;
+    }
+    @include custom {
+        padding: 40px 0;
+    }
+    .left-part {
+        width: 35%;
+        margin-right: 10px;
+        @include medium {
+            margin-right: 20px;
+        }
+        @include small {
+            width: 35%;
+            margin-right: 5%;
+        }
+        @include extraSmall {
+            margin-right: 2%;
+            width: 40%;
+            float: left;
+        }
+        @include custom {
+            display: none;
+        }
+    }
+    .right-part {
+        width: 45%;
+        @include small {
+            width: 55%;
+        }
+        @include extraSmall {
+            width: 58%;
+            float: left;
+        }
+        @include custom {
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .slider {
+        .slide {
+            img {
+                margin-bottom: 0px;
+                @include small {
+                    margin-bottom: 0px;
+                }
+            }
+            h3 {
+                font-weight: 600;
+                font-size: 44px;
+                @include small {
+                    font-size: 34px;
+                }
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0px 0 40px 0;
+                border-bottom: 1px solid $grey-color;
+                @include small {
+                    padding: 0;
+                }
+            }
+            p {
+                margin-top: 40px;
+                font-size: 16px;
+                line-height: 30px;
+                @include small {
+                    line-height: 26px;
+                    margin-top: 20px;
+                }
+            }
+        }
+        .fa {
+            background: transparent;
+            color: $grey-color;
+            @include extraSmall {
+                top: 110%;
+            }
+            &:hover {
+                color: #fff;
+            }
+            &.fa-angle-right {
+                right: 0;
+                @include small {
+                    right: -40px;
+                }
+                @include extraSmall {
+                    right: auto;
+                    left: 50%;
+                }
+            }
+            &.fa-angle-left {
+                left: auto;
+                right: 100px;
+                @include small {
+                    right: 0px;
+                }
+                @include extraSmall {
+                    right: auto;
+                    left: 50%;
+                    margin-left: -50px;
+                }
+            }
+        }
+    }
+}
+.about {
+    padding: 70px 0;
+    @include custom {
+        padding: 40px 0;
+    }
+    @include extraSmall {
+        padding: 50px 0 20px 0;
+        h3 {
+            line-height: 24px;
+        }
+    }
+    .angle-border {
+        @include extraSmall {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        h3 {
+            font-family: $black-font;
+            font-size: 30px;
+            font-weight: 600;
+            @include small {
+                font-size: 24px;
+            }
+        }
+    }
+    .tabs {
+        width: 80%;
+        margin: 0px auto 40px auto;
+        ;
+        @include extraSmall {
+            margin: 20px auto 20px auto;
+            ;
+        }
+        li {
+            display: inline-block;
+            padding: 0 50px;
+            @include small {
+                padding: 0 20px;
+            }
+            @include extraSmall {
+                padding: 0 5px;
+            }
+            a {
+                color: #8e93a2;
+                font-size: 22px;
+                font-weight: 600;
+                @include extraSmall {
+                    font-size: 18px;
+                }
+            }
+            &.active {
+                a {
+                    color: $blue-text;
+                }
+            }
+        }
+    }
+    .tab-content {
+        .left-part {
+            @include small {
+                width: 35%;
+                margin-right: 5%;
+            }
+            @include extraSmall {
+                width: 35%;
+                float: left;
+                img {
+                    display: inline-block;
+                }
+            }
+            @include custom {
+                width: 100%;
+            }
+        }
+        .right-part {
+            @include small {
+                width: 60%;
+            }
+            @include extraSmall {
+                width: 55%;
+                float: left;
+            }
+            @include custom {
+                width: 100%;
+            }
+        }
+        .text {
+            text-align: left;
+            padding-top: 70px;
+            @include small {
+                padding-top: 20px;
+            }
+            @include extraSmall {
+                padding-top: 0;
+            }
+            p {
+                margin-bottom: 40px;
+                color: #8e93a2;
+                font-size: 20px;
+                line-height: 36px;
+                padding-right: 50px;
+                @include small {
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    line-height: 28px;
+                    padding-right: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.order-q {
+    padding: 0 0 50px 0;
+    @include small {}
+    @include custom {
+        padding: 30px 0;
+    }
+    .angle-border {
+        h2, h3 {
+            font-family: $black-font;
+        }
+        h2 {
+            font-size: 100px;
+            margin-top: 15px;
+            @include extraSmall {
+                font-size: 50px;
+            }
+            @include custom {
+            	font-size: 40px;
+            }
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 30px;
+            @include extraSmall {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+    }
+    .text {
+        width: 85%;
+        margin: 30px auto 0 auto;
+        @include extraSmall {
+            margin: 10px auto 0 auto;
+            width: 100%;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 30px;
+            color: #8e93a2;
+            font-size: 20px;
+            line-height: 36px;
+            @include extraSmall {
+                font-size: 16px;
+                margin-bottom: 10px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+.end-of-search {
+    background: $yellow;
+    padding: 85px 0 120px 0;
+    ;
+    @include small {
+        padding: 40px 0 50px 0;
+    }
+    h1 {
+        font-size: 30px;
+        @include small {
+            font-size: 24px;
+        }
+    }
+    h2 {
+        font-size: 100px;
+        @include small {
+            font-size: 70px;
+        }
+        @include extraSmall {
+            font-size: 50px;
+        }
+    }
+    .wrap-form {
+        margin-top: 85px;
+        padding: 0;
+        @include small {
+            margin-top: 40px;
+        }
+        .group {
+            width: 30%;
+            margin-right: 2%;
+            display: inline-block;
+            @include custom {
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+        }
+        .btn {
+            width: 30%;
+            @include small {
+                font-size: 14px;
+                padding: 18px 10px;
+            }
+            @include custom {
+                width: 100%;
+            }
+        }
+    }
+}
+.contacts {
+    padding: 20px 0 70px 0;
+    @include extraSmall {
+        padding: 20px 0;
+    }
+    .wrap {
+        margin-top: 50px;
+        @include small {
+            margin-top: 20px;
+        }
+    }
+    .left-part {
+        margin-left: 10%;
+        @include small {
+            margin-left: 0;
+        }
+        @include extraSmall {} @include custom {
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .left-part,
+    .right-part {
+        width: 40%;
+        font-size: 21px;
+        font-weight: 600;
+        text-align: left;
+        @include small {
+            width: 50%;
+        }
+        @include extraSmall {
+            width: 50%;
+            float: left;
+            font-size: 18px;
+        }
+        @include custom {
+            width: 100%;
+            margin-left: 0;
+        }
+        p {
+            color: #8e93a2;
+            margin-bottom: 15px;
+            display: inline-block;
+            vertical-align: top;
+            strong, a {
+                color: $blue-text;
+            }
+        }
+        ul {
+            margin-left: 10px;
+            display: inline-block;
+            line-height: 24px;
+            li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+footer {
+    text-align: left;
+    ;
+    border-top: 1px solid $grey-color;
+    padding: 30px 0;
+    color: $grey-color;
+    @include extraSmall {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .wrap {
+        position: relative;
+    }
+    p {
+        text-align: center;
+    }
+    .btn-up {
+        color: $blue-text;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 15px 30px;
+        margin-top: -20px;
+        letter-spacing: 3px;
+        font-family: $black-font;
+        background: $yellow;
+        font-size: 16px;
+        display: inline-block;
+        @include extraSmall {
+            margin-top: 10px;
+        }
+    }
+}
+.popup-cont {
+    color: $blue-text;
+    width: 570px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2% 8%;
+    background: $yellow;
+    position: relative;
+    &.slider-popup {
+        background: none;
+        text-align: left;
+        padding: 0;
+        width: 90%;
+        max-width: 1050px;
+        .mfp-close{
+        	top: -20px;
+        	@include extraSmall{
+        		top: 0;
+        		right: -5px;
+        	}
+        }
+        h3 {
+        	text-transform: uppercase;
+        	margin-bottom: 15px;
+            color: $yellow;
+        }
+        h4 {
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            &.with-bborder {
+                padding-bottom: 30px;
+                border-bottom: 1px dashed $blue-text;
+            }
+        }
+            ul.circle-type {
+                columns: 2;
+                column-gap: 20px;
+                column-fill: auto;
+                list-style-type: circle;
+                max-height: 400px;
+                list-style-position: inside;
+				@include small{
+					max-height: 420px;
+
+				}
+				@include extraSmall{
+					columns: 1;
+					max-height: 100%;
+				}
+                li {
+                    padding-right: 30px;
+                    @include small{
+                    	column-gap: 10px;
+                    	padding-right: 0px;
+                    }
+                }
+            }
+            ul.with-icons {
+                &:after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                padding-bottom: 30px;
+                border-bottom: 1px dashed $blue-text;
+                margin-bottom: 30px;
+                li {
+                    width: 33%;
+                    text-align: center;
+                    float: left;
+                    @include custom{
+                    	width: 100%;
+                    	float: none;
+                    	margin-bottom: 15px;
+                    }
+                    h5 {
+                        font-size: 22px;
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+                        margin-top: 30px;
+                    }
+                    p {
+                    	font-weight: 400;
+                        font-size: 16px;
+                    }
+                    .wrap-img {
+                        height: 80px;
+                    }
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+            .result {
+                .wrap {
+                    h4 {
+                        font-size: 30px;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                          @include custom{
+                          	font-size: 24px;
+                          }
+                    }
+                    ul.with-nums {
+                        margin: 0;
+                    }
+                }
+            }
+            .fa {
+                background: transparent;
+                color: $yellow;
+                &.fa-angle-right {
+                    right: -90px;
+                    @include medium{
+                    	right: -60px;
+                    }
+                }
+                &.fa-angle-left {
+                    left: -90px;
+                    @include medium{
+                    	left: -60px;
+                    }
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+            .wrap {
+                padding: 40px 30px;
+                background: $yellow;
+                height: 550px;
+                @include medium{
+                	height: auto;
+                }
+				@include custom{
+					padding: 15px;
+				}
+                h4 {
+                    font-size: 20px;
+                }
+                .top-block {
+                    padding-bottom: 30px;
+                    border-bottom: 1px dashed $blue-text;
+                    &:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    .l-part,
+                    .r-part {
+                        float: left;
+                        width: 46%;
+                        @include custom{
+                        	width: 100%;
+                        }
+                    }
+                    .l-part {
+                        margin-right: 4%;
+                        p{
+                		 @include custom{
+                		 	margin-bottom: 10px;
+                		 }
+                        }
+                    }
+                }
+                ul.with-nums {
+                    margin-top: 0px;
+                    &:after {
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    .num {
+                        font-size: 60px;
+                        font-weight: 600;
+                        position: relative;
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 10px;
+                            width: 40px;
+                            height: 2px;
+                            background: $blue-text;
+                        }
+                    }
+                    li {
+                        // float: left;
+                        display: inline-block;
+                        margin-right: 3%;
+                        vertical-align: top;
+                        width: 30%;
+                        @include medium{
+                        	margin-right: 2%;
+                        }
+                        @include extraSmall{
+                        	width: 48%;
+                        	margin-right: 1%;
+                        }
+                        @include custom{
+                        	width: 100%;
+                        	text-align: center;
+                        }
+                        p {
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .bottom-block {
+                    padding-top: 30px;
+                    p {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    h4{
+                    	margin-bottom: 0;
+                    }
+                }
+                .l-part {
+                    p {
+                        font-weight: 600;
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                }
+                .r-part {
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+	&.slider-popup.simulation{
+		padding: 0;
+		.wrap{
+			height: auto;
+			padding: 0;
+			max-width: 100%;
+			background: #fff;
+			.left-block,  .right-block{
+				float: left;
+				width: 50%;
+				height: 100%;
+				@include extraSmall{
+					width: 100%;
+				}
+			}
+			.right-block{
+				padding: 50px 10px 10px 10px;
+				background: #fff;
+				text-align: center;
+				img{
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+			.left-block{
+				padding: 20px 20px 20px 35px;
+				background: $yellow;
+				@include custom{
+					padding: 15px;
+				}
+				&.full{
+					width: 100%;
+					float: none;
+				}
+				ul{
+					li{
+						float: none;
+						padding: 5px 0;
+						border-bottom: 1px dashed $blue-text;
+						padding-right: 40px;
+						@include custom{
+
+							padding: 0;
+							padding-bottom: 5px;
+						}
+						&:last-child{
+							border-bottom: none;
+						}
+						h5{
+							font-size: 18px;
+							text-transform: uppercase;
+							font-weight: 600;
+						}
+						p{
+							font-size: 16px;
+							line-height: 20px;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+
+	}
+	&.slider-popup.timeplan{
+		.wrap{
+			padding: 0;
+			padding-bottom: 20px;
+			height: auto;
+			background: #fff;
+			max-width: 100%;
+			@include custom{
+					width: 800px;
+					overflow: auto;
+				}
+			table{
+				min-width: 800px;
+                width: 100%;
+				thead{
+					background: $yellow;
+
+					td{
+						font-size: 18px;
+						font-weight: 600;
+						padding: 20px 30px;
+						&:first-child{
+							width: 15%;
+						}
+						&:nth-child(2){
+							width: 30%;
+						}
+						&:last-child{
+							width: 55%;
+						}
+					}
+				}
+				tbody{
+					background: #fff;
+					tr{
+						position: relative;
+						border-bottom: 1px dashed $blue-text;
+						&:last-child{
+							border-bottom: none;
+						}
+					}
+					td{
+						font-size: 16px;
+						line-height: 22px;
+						padding: 5px 30px;
+					}
+
+				}
+			}
+		}
+	}
+    @include extraSmall {
+        width: 85%;
+        padding: 20px;
+    }
+    .present-icon {
+        display: inline-block;
+        background: transparent url(../img/present-icon.png) no-repeat center center;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+        @include custom {
+            margin-bottom: 10px;
+        }
+    }
+    form {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    h3 {
+        font-size: 48px;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1;
+        margin-bottom: 10px;
+        @include custom {
+            font-size: 36px;
+        }
+    }
+    h4 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-bottom: 25px;
+        @include custom {
+            font-size: 22px;
+            line-height: 24px;
+            margin-bottom: 15px;
+        }
+    }
+    p {
+        font-size: 18px;
+        font-weight: 600;
+        &.note {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+    }
+    .btn {
+        @include custom {
+            padding: 15px 0;
+        }
+    }
+    .mfp-close {
+        top: -50px;
+        right: -45px;
+        color: #fff;
+        font-size: 46px;
+        position: absolute;
+        @include custom {
+            right: -20px;
+        }
+        &:hover {
+            cursor: pointer;
+            background: transparent;
+        }
+    }
+}
+
+.mfp-gallery .mfp-close{
+    &:active{
+        top: 50px;
+    }
+}
+
